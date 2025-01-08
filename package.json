@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "AlxsDev",
   "license": "ISC",
-  "description": "",
+  "description": "Broker MQTT con persistencia en MySQL",
   "type": "module",
   "dependencies": {
     "aedes": "^0.51.3",
