@@ -1,7 +1,7 @@
 import Aedes from 'aedes';
 import { createServer } from 'net';
 import mysql from 'mysql2/promise';
-
+import express from 'express';
 // Configuración de la base de datos
 const db = mysql.createPool({
     host: 'localhost',
@@ -49,4 +49,18 @@ aedes.on('publish', async (packet, client) => {
             console.error('Error procesando los datos:', error);
         }
     }
+});
+
+// Crear servidor HTTP con Express
+const app = express();
+
+// Ruta principal para mostrar un mensaje
+app.get('/', (req, res) => {
+    res.send('<h1>Servidor IoT con MQTT y Aedes está corriendo</h1>');
+});
+
+// Escuchar en el puerto 80 (HTTP)
+const httpPort = 80;
+app.listen(httpPort, () => {
+    console.log(`Servidor HTTP escuchando en el puerto ${httpPort}`);
 });
