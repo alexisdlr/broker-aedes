@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
 });
 
 // Escuchar en el puerto 80 (HTTP)
-const httpPort = 80;
+const httpPort = 3000;
 app.listen(httpPort, () => {
     console.log(`Servidor HTTP escuchando en el puerto ${httpPort}`);
 });
