@@ -14,7 +14,7 @@ const db = mysql.createPool({
 const aedes = Aedes();
 const server = createServer(aedes.handle);
 
-server.listen(1883, () => {
+server.listen(1884, () => {
     console.log('Servidor MQTT escuchando en el puerto 1883');
 });
 
